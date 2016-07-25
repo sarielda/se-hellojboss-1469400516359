@@ -1,0 +1,12 @@
+applications:
+- path: target/JBossHelloWorldApp.war
+  memory: 1024M
+  instances: 1
+  domain: mybluemix.net
+  name: se-hellojboss
+  host: se-hellojboss
+  disk_quota: 1024M
+  timeout: 180
+  buildpack: https://github.com/cloudfoundry-community/jboss-buildpack.git
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
